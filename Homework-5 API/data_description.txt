@@ -1,0 +1,5 @@
+1. Based on the graph 'Latitude vs. Max Temperature (25/11/2018)', we can see that cities on low latitude have higher temperature in general.
+
+2. On the data research day(25/11/2018), north earth is in winter, while the south part is in summer. Therefore, cities in north part are having a lower temperature in avarage at this moment comparing with the south.
+
+3. Humidity, cloudiness and weed speed have no clear relations with latitude, which means that we may need further researches in these 3 items if we would like to find more.
