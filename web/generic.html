@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<!--
+	Retrospect by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+
+<head>
+    <title>Playful Kiss (2010) Rating Review - User Rating</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/dataTables.bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <h1><a href="index.html">WD Web Homework</a></h1>
+        <a href="#nav">Menu</a>
+    </header>
+
+    <!-- Nav -->
+    <nav id="nav">
+        <ul class="links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="generic.html">Reviews</a></li>
+            <li><a href="data.html">Summary</a></li>
+            <li><a href="other_versions.html">Other Versions</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main -->
+    <section id="main" class="wrapper">
+        <div class="container">
+
+            <header class="major special">
+                <h2>Drama Review</h2>
+                <p>from https://mydramalist.com/20-playful-kiss/reviews</p>
+            </header>
+        </div>
+        <div style="margin-right: 1.25em; margin-left: 1.25em;">
+            <div id='table-container'></div>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="inner">
+            <ul class="icons">
+                <li>
+                    <a href="https://www.facebook.com/dian.wang.5264" target="_blank" class="icon fa-facebook">
+                        <span class="label">Facebook</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/wangdianyh" target="_blank" class="icon fa-github">
+                        <span class="label">Github</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/lvlvxing810/" target="_blank" class="icon fa-instagram">
+                        <span class="label">Instagram</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/wang-dian/" target="_blank" class="icon fa-linkedin">
+                        <span class="label">LinkedIn</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="copyright">
+                <li>Images: <a href="https://movie.douban.com/subject/4913214/all_photos" target="_blank">Douban</a>.
+                    <a href="https://mydramalist.com/" target="_blank">MyDramaList</a>.</li>
+                <li>Design: <a href="http://templated.co" target="_blank">TEMPLATED</a>.</li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.csv.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="assets/js/dataTables.bootstrap.js"></script>
+    <script type="text/javascript" src="assets/js/csv_to_html_table.js"></script>
+    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        // load csv data to web page
+        function format_link(link) {
+            if (link)
+                return "<a href='" + link + "' target='_blank'>" + link + "</a>";
+            else
+                return "";
+        }
+
+        CsvToHtmlTable.init({
+            csv_path: 'assets/data/review.csv',
+            element: 'table-container',
+            allow_download: true,
+            csv_options: {
+                separator: ',',
+                delimiter: '"'
+            },
+            datatables_options: {
+                "paging": false
+            },
+            custom_formatting: [
+                [4, format_link]
+            ]
+        });
+    </script>
+
+</body>
+
+</html>
