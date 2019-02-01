@@ -1,0 +1,78 @@
+img {
+    width: 100%;
+}
+
+header {
+    text-align: center;
+    margin: 1.7em 0 2.3em 0;
+}
+
+article {
+    margin-bottom: 3%;
+}
+
+
+/* global page style END */
+
+header.home-header {
+    background-image: url("img/home-bg.jpg");
+    background-size: cover;
+    /*background-color: rgba(0, 0, 0, 0.7);*/
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    height: 100vh;
+}
+
+header.home-header button {
+    margin: 0.7em;
+}
+
+header.home-header h1 {
+    color: #fff;
+}
+
+
+/* home page style END */
+
+.row ul {
+    padding-left: 0;
+}
+
+.row ul li {
+    list-style: none;
+}
+
+.row ul li .box {
+    border: 1px #999 solid;
+    border-radius: 3px;
+    padding: .7em;
+    margin-bottom: 1.7em;
+    box-shadow: 0 0 5px #999;
+    background-color: transparent;
+}
+
+
+/* gallery page style END */
+
+div.scrap-img {
+    margin-bottom: 1.7em;
+}
+
+div.side-box {
+    margin-bottom: 1.7em;
+}
+
+table.dataframe {
+    border: 2px solid #000;
+    width: 100%;
+}
+
+table.dataframe tr td,
+th {
+    padding: 0.5em 0.3em;
+}
+
+
+/* scrape page style END */
