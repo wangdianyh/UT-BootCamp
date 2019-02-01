@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Mission to Mars</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- mars css style-->
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='style.css') }}" />
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Scrape New Data</h1>
+        <a href="/"><button type="button" class="btn-lg btn-info">Back to Home</button></a>
+    </header>
+    <!-- header END-->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Latest Mars News</h2>
+                <article>
+                    <h3>{{data.news_title}}</h3>
+                    <p>{{data.news_content}}</p>
+                </article>
+            </div>
+        </div>
+        <!-- news END-->
+        <div class="row">
+            <div class="col-lg-8 col-xs-12 scrap-img">
+                <img src="{{data.img_url}}">
+            </div>
+            <!-- IMG END-->
+            <div class="col-lg-4 col-xs-12">
+                <div class="side-box">
+                    <h4>Current Weather on Mars</h4>
+                    <p>{{data.weather}}</p>
+                </div>
+                <!-- weahter END-->
+                <div class="side-box">
+                    <h4>Mars Facts</h4>
+                    {{data.fact_html | safe}}
+                </div>
+                <!-- -->
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
