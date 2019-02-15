@@ -1,7 +1,5 @@
 from flask import Flask, render_template
 from flask_pymongo import PyMongo
-import lxml.html
-#from jinja2 import Template
 from scraping.mission_to_mars import outputData
 
 app = Flask(__name__)
@@ -17,10 +15,7 @@ def index():
 @app.route('/scrape')
 def data():
     data = outputData()
-    #table = lxml.html.tostring(data['fact_html'])
-    #template = render_template('scrape.html', data=data)
     return render_template('scrape.html', data = data)
-    #return template
 
 # gallery image page
 @app.route('/gallery')
