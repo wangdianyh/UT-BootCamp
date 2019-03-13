@@ -95,7 +95,7 @@ function loadChart() {
     // load csv data
     d3.csv("assets/data/data.csv", function(error, baseData) {
         if (error) return console.warn(error);
-        //console.log(baseData);
+        console.log(baseData);
         // convert datatype to number
         baseData.forEach(function(data) {
             data.age = +data.age;
